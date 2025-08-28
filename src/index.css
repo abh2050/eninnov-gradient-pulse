@@ -7,56 +7,56 @@
 @layer base {
   :root {
     /* Core Background & Text */
-    --background: 220 26% 4%;
-    --foreground: 220 10% 95%;
+    --background: 220 15% 8%;
+    --foreground: 220 8% 92%;
 
-    /* Brand Colors - Deep Blue to Purple Spectrum */
-    --primary: 240 100% 20%;
-    --primary-foreground: 220 10% 95%;
-    --primary-glow: 250 100% 65%;
+    /* Brand Colors - Professional Blue Spectrum */
+    --primary: 220 40% 25%;
+    --primary-foreground: 220 8% 95%;
+    --primary-glow: 220 60% 55%;
     
-    /* Secondary - Purple */
-    --secondary: 280 100% 25%;
-    --secondary-foreground: 220 10% 95%;
+    /* Secondary - Deep Blue */
+    --secondary: 215 35% 20%;
+    --secondary-foreground: 220 8% 95%;
     
-    /* Accent - Neon Teal */
-    --accent: 180 100% 50%;
-    --accent-foreground: 220 26% 4%;
+    /* Accent - Professional Teal */
+    --accent: 200 60% 45%;
+    --accent-foreground: 220 15% 8%;
     
     /* Card System */
-    --card: 220 26% 6%;
-    --card-foreground: 220 10% 95%;
-    --card-glow: 240 100% 20%;
+    --card: 220 15% 12%;
+    --card-foreground: 220 8% 92%;
+    --card-glow: 220 40% 25%;
     
     /* UI Elements */
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 10% 65%;
-    --border: 220 15% 20%;
-    --input: 220 15% 15%;
-    --ring: 250 100% 65%;
+    --muted: 220 12% 18%;
+    --muted-foreground: 220 8% 65%;
+    --border: 220 12% 22%;
+    --input: 220 12% 18%;
+    --ring: 220 60% 55%;
     
     /* Popover */
-    --popover: 220 26% 8%;
-    --popover-foreground: 220 10% 95%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 220 8% 92%;
     
     /* Destructive */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 220 10% 95%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 220 8% 95%;
 
-    /* Premium Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(240 100% 20%) 0%, hsl(280 100% 25%) 50%, hsl(250 100% 30%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(240 100% 15%) 0%, hsl(280 100% 20%) 30%, hsl(240 100% 25%) 70%, hsl(180 100% 30%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(250 100% 65%) 0%, hsl(180 100% 50%) 100%);
-    --gradient-subtle: linear-gradient(135deg, hsl(220 26% 6%) 0%, hsl(240 100% 8%) 100%);
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 40% 25%) 0%, hsl(215 35% 20%) 50%, hsl(220 45% 30%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 15% 8%) 0%, hsl(220 40% 15%) 30%, hsl(215 35% 18%) 70%, hsl(200 30% 20%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(220 60% 55%) 0%, hsl(200 60% 45%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(220 15% 10%) 0%, hsl(220 30% 12%) 100%);
     
-    /* Glow Effects */
-    --glow-primary: 0 0 30px hsl(250 100% 65% / 0.3);
-    --glow-accent: 0 0 20px hsl(180 100% 50% / 0.4);
-    --glow-soft: 0 0 40px hsl(240 100% 20% / 0.2);
+    /* Professional Glow Effects */
+    --glow-primary: 0 0 20px hsl(220 60% 55% / 0.2);
+    --glow-accent: 0 0 15px hsl(200 60% 45% / 0.25);
+    --glow-soft: 0 0 30px hsl(220 40% 25% / 0.15);
     
     /* Shadows */
-    --shadow-elegant: 0 25px 50px -12px hsl(240 100% 20% / 0.25);
-    --shadow-glow: 0 0 50px hsl(250 100% 65% / 0.3);
+    --shadow-elegant: 0 20px 40px -12px hsl(220 40% 15% / 0.3);
+    --shadow-glow: 0 0 30px hsl(220 60% 55% / 0.2);
     
     /* Animation */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -98,7 +98,7 @@
     @apply bg-gradient-to-r from-primary-glow to-accent bg-clip-text text-transparent;
   }
   
-  /* Glow Effects */
+  /* Professional Glow Effects */
   .glow-primary {
     box-shadow: var(--glow-primary);
   }
@@ -138,9 +138,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 30%, hsl(250 100% 65% / 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, hsl(180 100% 50% / 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, hsl(280 100% 25% / 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 30%, hsl(220 60% 55% / 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, hsl(200 60% 45% / 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, hsl(215 35% 20% / 0.08) 0%, transparent 50%);
     animation: particleFloat 12s ease-in-out infinite;
   }
 }
@@ -193,9 +193,9 @@
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px hsl(250 100% 65% / 0.3);
+    box-shadow: 0 0 15px hsl(220 60% 55% / 0.2);
   }
   50% {
-    box-shadow: 0 0 40px hsl(250 100% 65% / 0.6);
+    box-shadow: 0 0 25px hsl(220 60% 55% / 0.4);
   }
 }
