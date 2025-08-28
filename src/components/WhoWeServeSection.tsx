@@ -53,7 +53,7 @@ const WhoWeServeSection = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-background relative">
+    <section id="who-we-serve" className="py-24 lg:py-32 bg-background relative">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">

@@ -1,53 +1,120 @@
-# Welcome to your Lovable project
+# ENINNOV - Engineering Innovation Solutions
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/2b037702-9b5c-4d35-b9bd-518b55867bbd
+Professional website for ENINNOV, showcasing engineering consulting, data modernization, project management, and staffing services.
 
-## How can I edit this code?
+**Live URL**: https://abh2050.github.io/eninnov-gradient-pulse/
 
-There are several ways of editing your application.
+## Deployment to GitHub Pages
 
-**Use Lovable**
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2b037702-9b5c-4d35-b9bd-518b55867bbd) and start prompting.
+### Automatic Deployment (Recommended)
 
-Changes made via Lovable will be committed automatically to this repo.
+1. Push your changes to the `main` branch
+2. GitHub Actions will automatically build and deploy the site
+3. The site will be available at: https://abh2050.github.io/eninnov-gradient-pulse/
 
-**Use your preferred IDE**
+### Manual Deployment
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+You can also deploy manually using the provided script:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Make sure you're in the project directory
+cd eninnov-gradient-pulse
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Run the deployment script
+./deploy.sh
 ```
 
-**Edit a file directly in GitHub**
+Or run the commands directly:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+# Build the project
+bun run build
 
-**Use GitHub Codespaces**
+# Deploy to GitHub Pages
+bun run deploy
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
+### GitHub Pages Setup
+
+To set up GitHub Pages for your repository:
+
+1. Go to your repository settings on GitHub
+2. Navigate to "Pages" in the sidebar
+3. Under "Source", select "GitHub Actions"
+4. The workflow will handle the rest automatically
+
+## Development
+
+### Prerequisites
+
+- [Bun](https://bun.sh/) (recommended) or Node.js & npm
+- Git
+
+### Local Development Setup
+
+```sh
+# Step 1: Clone the repository
+git clone https://github.com/abh2050/eninnov-gradient-pulse.git
+
+# Step 2: Navigate to the project directory
+cd eninnov-gradient-pulse
+
+# Step 3: Install dependencies (using Bun)
+bun install
+
+# Step 4: Start the development server
+bun run dev
+```
+
+The site will be available at http://localhost:8080
+
+### Available Scripts
+
+- `bun run dev` - Start development server
+- `bun run build` - Build for production
+- `bun run preview` - Preview production build locally
+- `bun run deploy` - Deploy to GitHub Pages (manual)
+- `bun run lint` - Run ESLint
+
+### Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── ui/             # Reusable UI components (shadcn/ui)
+│   ├── Navigation.tsx  # Site navigation
+│   ├── HeroSection.tsx # Landing section
+│   └── ...            # Other sections
+├── pages/              # Page components
+├── lib/                # Utilities
+└── assets/             # Static assets
+```
+
+### Technologies Used
+
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - UI component library
+- **Lucide React** - Icons
+- **React Router** - Routing
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test locally
+5. Submit a pull request
+
+## License
+
+This project is private and proprietary to ENINNOV.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
 ## What technologies are used for this project?

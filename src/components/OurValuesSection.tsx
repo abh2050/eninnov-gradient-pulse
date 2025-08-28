@@ -31,7 +31,7 @@ const OurValuesSection = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-gradient-subtle relative overflow-hidden">
+    <section id="our-values" className="py-24 lg:py-32 bg-gradient-subtle relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 particles-container">
         <div className="absolute top-20 left-10 w-40 h-40 bg-primary-glow/10 rounded-full blur-3xl animate-pulse"></div>

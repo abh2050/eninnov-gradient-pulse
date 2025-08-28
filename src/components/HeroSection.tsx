@@ -3,6 +3,17 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 const HeroSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop - 100; // Offset for fixed header
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center animated-gradient particles-container overflow-hidden">
       {/* Professional Background Elements */}
@@ -39,11 +50,21 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <Button variant="hero" size="lg" className="text-lg px-8 py-4 h-auto">
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className="text-lg px-8 py-4 h-auto"
+            onClick={() => scrollToSection('contact')}
+          >
             Get in Touch
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
-          <Button variant="hero-outline" size="lg" className="text-lg px-8 py-4 h-auto">
+          <Button 
+            variant="hero-outline" 
+            size="lg" 
+            className="text-lg px-8 py-4 h-auto"
+            onClick={() => scrollToSection('who-we-are')}
+          >
             Learn More
           </Button>
         </div>
