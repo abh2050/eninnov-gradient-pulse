@@ -27,9 +27,21 @@ if ! git diff-index --quiet HEAD --; then
     fi
 fi
 
+# Detect package manager
+if command -v bun &> /dev/null; then
+    PKG_MANAGER="bun"
+    echo "📋 Using Bun package manager"
+elif command -v npm &> /dev/null; then
+    PKG_MANAGER="npm"
+    echo "📋 Using npm package manager"
+else
+    echo "❌ Error: Neither Bun nor npm is installed. Please install one of them first."
+    exit 1
+fi
+
 # Build the project
 echo "📦 Building the project..."
-bun run build
+$PKG_MANAGER run build
 
 if [ $? -ne 0 ]; then
     echo "❌ Build failed. Please fix the errors and try again."
@@ -40,7 +52,7 @@ echo "✅ Build successful!"
 
 # Deploy to GitHub Pages
 echo "🌐 Deploying to GitHub Pages..."
-bun run deploy
+$PKG_MANAGER run deploy
 
 if [ $? -eq 0 ]; then
     echo "🎉 Deployment successful!"
